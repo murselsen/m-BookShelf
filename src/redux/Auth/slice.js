@@ -25,7 +25,7 @@ const persistAuthReducer = persistReducer(
     storage: localStorage,
     whitelist: ['token'],
   },
-  authSlice
+  authSlice.reducer
 );
 
 export const authReducer = persistAuthReducer;

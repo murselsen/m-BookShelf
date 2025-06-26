@@ -10,6 +10,6 @@ export default () => {
       book: bookReducer,
     },
   });
-  const persistorStore = persistStore(store);
-  return { store, persistorStore };
+  const persisterStore = persistStore(store);
+  return { store, persisterStore };
 };
