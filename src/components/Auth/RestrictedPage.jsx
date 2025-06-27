@@ -3,9 +3,9 @@ import { Navigate } from 'react-router-dom';
 
 import { selectIsLoggedIn } from '../../redux/Auth/selectors';
 
-const PrivatePage = ({ children }) => {
+const RestrictedPage = ({ children }) => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
-  return isLoggedIn ? children : <Navigate to="/login" replace />;
+  return isLoggedIn ? <Navigate to="/" replace /> : children;
 };
-export default PrivatePage;
+export default RestrictedPage;

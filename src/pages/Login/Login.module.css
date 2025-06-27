@@ -1,0 +1,72 @@
+.Page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--violet);
+}
+
+.Page .Card {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+}
+
+
+html[data-theme="light"] .Page .Card {
+    color: var(--black);
+    background-color: var(--light-gray);
+}
+
+html[data-theme="dark"] .Page .Card {
+    color: var(--white);
+    background-color: var(--black-1);
+}
+
+
+.Page .Card .Title {
+    text-align: center;
+}
+
+.Page .Card .Form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.Page .Card .Form .InputGroup {
+    position: relative;
+    border-radius: 40px;
+    padding: 20px 40px;
+    border: 1px solid var(--violet);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.Form .InputGroup .Label {
+    position: absolute;
+    transition: all 4500ms ease-in-out;
+}
+
+.Form .InputGroup.Focus {
+    padding: 80px;
+}
+
+.Form .InputGroup .Input {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.Form .InputGroup .Input:focus {
+    background-color: aqua;
+}
+
+.Form .InputGroup .Input:focus+.Form .InputGroup .Label {
+    color: var(--violet);
+}

@@ -4,10 +4,7 @@ import { persistReducer } from 'redux-persist';
 import localStorage from 'redux-persist/lib/storage';
 
 const initialState = {
-  user: {
-    name: null,
-    email: null,
-  },
+  user: {},
   token: null,
   isLogged: false,
   error: null,
