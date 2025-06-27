@@ -26,6 +26,7 @@
 
 ._links {
     display: flex;
+    flex: 1;
     flex-wrap: nowrap;
     align-items: center;
     gap: 24px;
@@ -34,6 +35,22 @@
 ._links ._link {
     padding: 8px 16px;
     border-radius: 36px;
+    display: flex;
+    gap: 8px;
+    align-content: center;
+}
+
+._links ._link:hover {
+    background-color: var(--yellow);
+}
+
+._links ._link:hover a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -4%;
+    color: var(--black);
+
 }
 
 ._links ._link.active {
@@ -47,4 +64,26 @@
     letter-spacing: -4%;
     color: var(--black);
     text-transform: uppercase;
+}
+
+._auth {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 24px;
+}
+
+._theme-toggle {
+    width: 40px;
+    height: 20px;
+    background: linear-gradient(180deg, #4F2EE8 0%, #DCDCDC 100%);
+    border: none;
+    display: flex;
+
+}
+
+._theme-toggle ._icon {
+    display: inline-block;
+    width: 10px;
+    z-index: 11;
 }
