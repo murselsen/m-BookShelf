@@ -1,5 +1,5 @@
 import React from 'react';
-import { BiUser } from 'react-icons/bi';
+import { BiSolidRightArrowAlt, BiUser } from 'react-icons/bi';
 import './Navbar.css';
 
 import { useSelector } from 'react-redux';
@@ -9,18 +9,19 @@ const AuthNav = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return !isLoggedIn ? (
-    <div className={'AuthContainer'}>
-      <div className={'AuthButton'}>
-        <BiUser /> <span>Sign Up</span>
-      </div>
+    <div className='_authContainer'>
+      <a href="/login" type="button" className='_authButton'>
+        <span className='_title'>Sign Up</span>
+        <BiSolidRightArrowAlt className='_icon' />
+      </a>
     </div>
   ) : (
-    <div className={'AuthContainer'}>
-      <div className={'AuthButton'}>
+    <div className={'_authContainer'}>
+      <button type="button" className={'_authButton'}>
         <BiUser /> Stephen
-      </div>
-      <div className={'AuthDropdown'}>
-        <button type="button" className={'AuthLink'}>
+      </button>
+      <div className={'_authDropdown'}>
+        <button type="button" className={'_authLink'}>
           <span>Log Out</span>
         </button>
       </div>

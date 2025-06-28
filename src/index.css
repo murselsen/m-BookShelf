@@ -31,6 +31,9 @@ html[data-theme="dark"] {
   background-color: var(--black-1);
 }
 
+#root {
+  width: 100%;
+}
 
 a {
   font-weight: 500;
@@ -48,7 +51,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family: DM Sans, system-ui, Avenir, Helvetica, Arial, sans-serifs;
+  font-family: DM Sans, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -58,14 +61,14 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  /* transition: border-cöolor 0.25s; */
+
 }
 
 button:hover {

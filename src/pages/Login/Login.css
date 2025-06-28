@@ -35,22 +35,19 @@ html[data-theme="dark"] .Page .Card {
     display: flex;
     flex-direction: column;
     gap: 28px;
+    margin-top: 30px;
 }
 
 .Page .Card .Form .InputGroup {
     position: relative;
     border-radius: 40px;
     padding: 20px 40px;
-    border: 1px solid var(--violet);
+    border: 2px solid var(--black);
     transition: all 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
 }
 
-.Form .InputGroup .Label {
-    position: absolute;
-    transition: all 4500ms ease-in-out;
-}
 
 .Form .InputGroup.Focus {
     padding: 80px;
@@ -63,8 +60,11 @@ html[data-theme="dark"] .Page .Card {
     border: none;
 }
 
-.Form .InputGroup .Input:focus {
-    background-color: aqua;
+.Form .InputGroup .Input {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -1%;
+    text-transform: capitalize;
 }
 
 .Form .InputGroup .Input:focus+.Form .InputGroup .Label {

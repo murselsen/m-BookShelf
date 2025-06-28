@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
       <ul className="_links">
         <NavbarLink to={'/'} title={'Home'} />
-        {!isLoggedIn && <UserNav />}
+        {isLoggedIn && <UserNav />}
       </ul>
       <div className="_auth">
         <ThemeToggle />
@@ -50,17 +50,23 @@ const UserNav = () => {
 
 const ThemeToggle = () => {
   const [theme, setTheme] = React.useState('light');
+  const [isActive, setIsActive] = React.useState(false);
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
+    setIsActive(!isActive);
     document.documentElement.setAttribute('data-theme', newTheme);
   };
 
   return (
-    <button type="button" className="_theme-toggle" onClick={toggleTheme}>
+    <button
+      type="button"
+      className={isActive ? '_theme-toggle active' : '_theme-toggle'}
+      onClick={toggleTheme}
+    >
       <FaCircle className="_icon" />
-      <FaCircle className="_icon" />
+      {/* <FaCircle className="_icon" /> */}
     </button>
   );
 };
