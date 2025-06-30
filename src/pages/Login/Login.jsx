@@ -28,7 +28,7 @@ const Login = () => {
     console.log('Password:', password);
 
     dispatch(loginUser(values));
-    actions.resetForm();  
+    actions.resetForm();
   };
 
   return (
@@ -56,7 +56,7 @@ const Login = () => {
               icon={<TbLockPassword />}
             />
             <button type="submit" className="Button">
-              SIGN UP
+              SIGN IN
             </button>
           </Form>
         </Formik>

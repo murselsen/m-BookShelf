@@ -1,0 +1,19 @@
+.Page {
+    width: 100%;
+    height: calc(100vh - 72px);
+    display: flex;
+    padding: 40px 24px 100px 24px;
+    gap: 40px;
+}
+
+.Sidebar {
+    flex: 1;
+}
+
+.PageContent {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: wheat;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setTheme } from '../../redux/theme';
 import { useLocation } from 'react-router-dom';
 import { FaCircle, FaShoppingBag } from 'react-icons/fa';
 import AuthNav from './AuthNav';
@@ -49,12 +50,17 @@ const UserNav = () => {
 };
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = React.useState('light');
-  const [isActive, setIsActive] = React.useState(false);
+  const pageTheme = useSelector(state => state.theme.value);
+  document.documentElement.setAttribute('data-theme', pageTheme);
+  const [comTheme, setComTheme] = React.useState(pageTheme);
+  const [isActive, setIsActive] = React.useState(pageTheme === 'dark');
+
+  const dispatch = useDispatch();
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
+    const newTheme = comTheme === 'light' ? 'dark' : 'light';
+    dispatch(setTheme(newTheme));
+    setComTheme(newTheme);
     setIsActive(!isActive);
     document.documentElement.setAttribute('data-theme', newTheme);
   };
