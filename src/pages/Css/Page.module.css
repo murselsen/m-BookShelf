@@ -1,13 +1,16 @@
 .Page {
     width: 100%;
-    height: calc(100vh - 72px);
+    height: 100%;
+    /* height: calc(100vh - 72px); */
     display: flex;
+    flex-wrap: wrap;
     padding: 40px 24px 100px 24px;
     gap: 40px;
 }
 
 .Sidebar {
     flex: 1;
+    border: 1px solid black;
 }
 
 .PageContent {

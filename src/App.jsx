@@ -18,7 +18,6 @@ import Navbar from './components/Navbar/Navbar';
 const App = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

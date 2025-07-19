@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 72px);
+    height: 100vh;
     background-color: var(--violet);
 }
 
@@ -89,6 +89,7 @@ html[data-theme="dark"] .Form .InputGroup .Input {
     background-color: var(--black);
     color: var(--white)
 }
+
 html[data-theme="dark"] .Form .Button {
     background-color: var(--white);
     color: var(--black);
