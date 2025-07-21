@@ -1,32 +1,28 @@
-import './CategoryBox.css';
+import css from './CategoryBox.module.css';
+import { useLocation } from 'react-router-dom';
 const CategoryBox = () => {
   return (
-    <div className="_categoryBox">
-      <ul className="_list">
-        <li className="_item">
-          <a href="/category/all" className="_link">
-            All categories
-          </a>
-        </li>
-        <li className="_item">
-          <a href="/category/fiction" className="_link">
-            Fiction
-          </a>
-        </li>
-        <li className="_item">
-          <a href="/category/fiction" className="_link">
-            Fiction
-          </a>
-        </li>
+    <div className={css.CategoryBox}>
+      <ul className={css.List}>
+        <CategoryLink to={'/'} title={'All categories'} />
+        <CategoryLink to={'/category/fiction'} title={'Fiction'} />
+        <CategoryLink to={'/category/non-fiction'} title={'Non-Fiction'} />
       </ul>
     </div>
   );
 };
 
 const CategoryLink = ({ to, title }) => {
+  const location = useLocation();
+
   return (
-    <li className="_item">
-      <a href={to} className="_link">
+    <li className={css.Item}>
+      <a
+        href={to}
+        className={
+          location.pathname === to ? `${css.Link} ${css.Active}` : css.Link
+        }
+      >
         {title}
       </a>
     </li>
