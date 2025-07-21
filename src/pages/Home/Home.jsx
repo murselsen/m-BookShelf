@@ -6,17 +6,19 @@ import Navbar from '../../components/Navbar/Navbar';
 
 const Home = () => {
   return (
-    <div className={pageCss.Page}>
+    <>
       <Navbar />
-      <aside className={pageCss.Sidebar}>
-        <CategoryBox />
-      </aside>
-      <main className={pageCss.PageContent}>
-        <h1>Welcome to m-BookShelf</h1>
-        <p>Your personal book collection manager.</p>
-        <p>Browse categories, manage your books, and more!</p>
-      </main>
-    </div>
+      <div className={pageCss.Page}>
+        <aside className={pageCss.Sidebar}>
+          <CategoryBox />
+        </aside>
+        <main className={pageCss.PageContent}>
+          <h1>Best Sellers Books</h1>
+          <p>Your personal book collection manager.</p>
+          <p>Browse categories, manage your books, and more!</p>
+        </main>
+      </div>
+    </>
   );
 };
 

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
@@ -12,10 +14,16 @@ const Category = lazy(() => import('./pages/Category/Category'));
 const Login = lazy(() => import('./pages/Login/Login'));
 const Register = lazy(() => import('./pages/Register/Register'));
 
-// Components
-import Navbar from './components/Navbar/Navbar';
-
+// Redux Operations
+import { fetchBooks } from './redux/Book/operations';
 const App = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks())
+  }, [dispatch]);
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
