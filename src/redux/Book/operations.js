@@ -21,5 +21,11 @@ export const fetchBooks = createAsyncThunk(
 export  const fetchCategories = createAsyncThunk("books/fetchCategories", async (_, thunkAPI) => {
     try {
         console.log('Fetching categories...');
+        const response = await axios.get('category-list');
+        console.log('Categories fetched successfully:', response);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching categories:', error);
+        return thunkAPI.rejectWithValue(error.message);
     }
 });
