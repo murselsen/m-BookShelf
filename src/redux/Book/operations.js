@@ -17,3 +17,9 @@ export const fetchBooks = createAsyncThunk(
     }
   }
 );
+
+export  const fetchCategories = createAsyncThunk("books/fetchCategories", async (_, thunkAPI) => {
+    try {
+        console.log('Fetching categories...');
+    }
+});
