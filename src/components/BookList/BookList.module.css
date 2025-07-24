@@ -1,0 +1,6 @@
+.BookList {
+    display: flex;
+    gap: 24px;
+}
+
+.BookItem {}
