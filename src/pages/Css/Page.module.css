@@ -10,7 +10,7 @@
 
 .Sidebar {
     flex: 1;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .PageContent {
@@ -18,5 +18,17 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    background-color: wheat;
+}
+
+.PageTitle {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -4%;
+    color: var(--black)
+}
+
+.PageTitle span {
+    color: var(--violet);
 }
